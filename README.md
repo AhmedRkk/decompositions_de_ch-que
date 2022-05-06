@@ -1,2 +1,2 @@
-# decompositions_de_ch-que
+# decompositions_de_cheque
 decompositions de chèque avec un code intelligent artificielle python

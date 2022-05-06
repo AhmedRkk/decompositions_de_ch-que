@@ -1,0 +1,8 @@
+Flask
+pytesseract
+werkzeug
+flask_mysqldb
+
+
+mysql-connector-python
+mysql-connector-python-rf

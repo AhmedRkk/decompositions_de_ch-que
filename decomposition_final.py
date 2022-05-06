@@ -1,21 +1,21 @@
 import pytesseract as tess
-from  process_image  import *
+
 import cv2
 
 base_path = 'besoin/'
 
-
+# la tronsformation  de l' image d'aderesse de  banque  en text
 def adresse_bank(nom_image):
-    tess.pytesseract.tesseract_cmd = r'C:\Users\LENOVO\.conda\envs\tesseract\Library\bin\tesseract.exe'
+   # tess.pytesseract.tesseract_cmd = r'C:\Users\LENOVO\.conda\envs\tesseract\Library\bin\tesseract.exe'
     image = cv2.imread(base_path + nom_image)
     text = tess.image_to_string(image)
     liste = text.split()
     adresse =" ".join(liste)
     return adresse
 
-
-def num_cheq(nom_image):
-    tess.pytesseract.tesseract_cmd = r'C:\Users\LENOVO\.conda\envs\tesseract\Library\bin\tesseract.exe'
+# la tronsformation  de l'image de numero bancaire en text
+def numero_cheque(nom_image):
+   # tess.pytesseract.tesseract_cmd = r'C:\Users\LENOVO\.conda\envs\tesseract\Library\bin\tesseract.exe'
     image = cv2.imread(base_path + nom_image)
     text = tess.image_to_string(image)
 
@@ -37,9 +37,9 @@ def num_cheq(nom_image):
     else:
         return '0'
 
-
+# la tronsformation  de l' image de rib bancaire en text
 def rib(nom_image):
-    tess.pytesseract.tesseract_cmd = r'C:\Users\LENOVO\.conda\envs\tesseract\Library\bin\tesseract.exe'
+    #tess.pytesseract.tesseract_cmd = r'C:\Users\LENOVO\.conda\envs\tesseract\Library\bin\tesseract.exe'
     image = cv2.imread(base_path + nom_image)
     text = tess.image_to_string(image)
     l = text.split()
